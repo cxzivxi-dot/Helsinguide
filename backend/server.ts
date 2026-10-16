@@ -42,6 +42,6 @@ app.get('/api/health/db', async (_req, res) => {
 app.use('/api/places', placesRouter);
 
 
-app.listen(PORT, () => {
-  console.log(`Helsinguide API running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Helsinguide API running on port ${PORT}`);
 });
