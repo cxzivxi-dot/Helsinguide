@@ -1,75 +1,67 @@
-# React + TypeScript + Vite
+# Helsinguide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## О проекте
 
-Currently, two official plugins are available:
+**Helsinguide** — интерактивный веб-путеводитель по Хельсинки, предназначенный для туристов и жителей города.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Проект помогает находить интересные места, просматривать информацию о них, изучать категории, читать отзывы и оценки, строить маршруты и сохранять понравившиеся места в избранное.
 
-## React Compiler
+## Основные возможности
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- интерактивная карта Хельсинки;
+- поиск мест по названию;
+- категории мест;
+- карточки достопримечательностей, кафе, ресторанов, музеев, парков и других объектов;
+- рейтинги и отзывы пользователей;
+- построение маршрутов;
+- готовые тематические маршруты;
+- добавление мест в избранное;
+- адаптивный интерфейс для компьютеров и мобильных устройств.
 
-## Expanding the ESLint configuration
+## Целевая аудитория
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- туристы, посещающие Хельсинки;
+- жители Хельсинки, которые хотят находить новые интересные места.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Стек технологий
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Backend
+- Node.js
+- Express
 
-```
+### База данных
+- PostgreSQL
+- Prisma ORM
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Карта
+- Leaflet
+- OpenStreetMap
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Дизайн
+- Figma
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Контроль версий
+- Git
+- GitHub
 
-```
+## Структура проекта
+
+Проект планируется разделить на следующие части:
+
+- `frontend/` — пользовательский интерфейс;
+- `backend/` — серверная логика и REST API;
+- `database/` — структура базы данных, миграции и начальные данные.
+
+## Цель проекта
+
+Создать удобный и понятный интерактивный путеводитель по Хельсинки, объединяющий карту, информацию о местах, отзывы, рейтинги и маршруты в одном веб-приложении.
+
+## Статус проекта
+
+Проект находится на этапе проектирования и разработки.
