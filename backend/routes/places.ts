@@ -1,6 +1,6 @@
 
 import { Router } from 'express';
-import { getPlaces } from '../controllers/placesController';
+import { getPlaces } from '../controllers/placesController.js';
 
 const router = Router();
 
